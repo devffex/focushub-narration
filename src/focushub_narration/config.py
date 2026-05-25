@@ -1,17 +1,20 @@
 import torch
 
-# Default settings
+# Default settings for XTTS v2
+DEFAULT_MODEL_NAME = "tts_models/multilingual/multi-dataset/xtts_v2"
 DEFAULT_LANG_CODE = "es"
-DEFAULT_VOICE = "ef_dora"
+DEFAULT_REFERENCE_VOICE = "voices/alberto_rodriguez.mp3"
 DEFAULT_SAMPLE_RATE = 24000
 DEFAULT_SPEED = 1.0
 
-# Supported Spanish voice styles
-SPANISH_VOICES = {
-    "ef_dora": "Spanish Female - highly recommended for clear, expressive inflections",
-    "em_alex": "Spanish Male",
-    "em_santa": "Spanish Male",
-}
+# Mastering chain defaults (Phase 2: Automated Audio Mastering Pipeline)
+MASTERING_HPF_CUTOFF_HZ = 80
+MASTERING_COMPRESSOR_THRESHOLD_DB = -20.0
+MASTERING_COMPRESSOR_RATIO = 2.0
+MASTERING_COMPRESSOR_ATTACK_MS = 15.0
+MASTERING_COMPRESSOR_RELEASE_MS = 150.0
+MASTERING_LIMITER_THRESHOLD_DB = -1.0
+MASTERING_TARGET_LUFS = -14.0
 
 
 def get_device() -> str:
