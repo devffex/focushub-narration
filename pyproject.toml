@@ -1,0 +1,32 @@
+[project]
+name = "focushub-narration"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "kokoro[gpu]>=0.9.4",
+    "soundfile[gpu]>=0.13.1",
+    "torch[gpu]>=2.12.0",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+# Enable Pyflakes (F), Pycodestyle (E, W), isort (I), and Flake8-bugbear (B)
+select = ["E", "F", "W", "I", "B"]
+ignore = []
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+
+[dependency-groups]
+dev = [
+    "ruff>=0.15.14",
+]
+

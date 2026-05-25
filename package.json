@@ -1,0 +1,11 @@
+{
+  "name": "focushub-narration",
+  "version": "0.1.0",
+  "description": "High Quality Spanish Text-to-Speech narration package using Kokoro-82M",
+  "scripts": {
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "husky": "^9.0.11"
+  }
+}
